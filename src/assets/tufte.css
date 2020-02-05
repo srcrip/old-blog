@@ -383,7 +383,7 @@ h3 > code {
 
 pre > code {
   font-size: 0.9rem;
-  min-height: 4rem;
+  /* min-height: 4rem; */
   background-color: #f5f5ec;
   padding: 2rem;
   /* margin: 1rem; */
