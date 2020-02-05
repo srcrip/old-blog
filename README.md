@@ -1,6 +1,6 @@
 # My personal site
 
-Built with [Gridsome](https://gridsome.org/). Contains my blog and resume.
+Built with [Gridsome](https://gridsome.org/).
 
 ## Development and deployment
 
