@@ -34,8 +34,4 @@ export default {
 };
 </script>
 
-<style scoped>
-pre code {
-  width: 100%;
-}
-</style>
+<style scoped></style>
