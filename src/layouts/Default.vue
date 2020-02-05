@@ -1,10 +1,12 @@
 <template>
   <div class="layout">
     <header class="header">
-      <h1 class="main-header">
-        <a href="/">Marble Zone</a>
-        <h2>sevensidedmarble's blog</h2>
-      </h1>
+      <div class="main-header">
+        <h1 class="main-h1">
+          <a href="/">Marble Zone</a>
+        </h1>
+        <h2 class="sub-header">sevensidedmarble's blog</h2>
+      </div>
       <nav class="nav">
         <g-link to="/">Blog</g-link>
         <g-link to="/resume">Resume</g-link>
@@ -52,7 +54,7 @@ main {
   flex: 1;
 }
 
-h1 h2 {
+.sub-header {
   margin: 5px;
   font-size: 1.25rem;
 }
@@ -65,6 +67,10 @@ h1 h2 {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+
+.main-h1 {
+  margin: 0;
 }
 
 .header {
