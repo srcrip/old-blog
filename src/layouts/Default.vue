@@ -39,7 +39,7 @@ query {
   }
 
   nav {
-    margin: 0 auto;
+    margin: .75rem auto;
   }
 }
 
@@ -70,7 +70,8 @@ main {
 }
 
 .main-h1 {
-  margin: 0;
+  margin-top: .7rem;
+  margin-bottom: .6rem;
 }
 
 .header {
