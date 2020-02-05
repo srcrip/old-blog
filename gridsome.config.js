@@ -7,12 +7,11 @@
 module.exports = {
   siteName: "Marble Zone",
   siteUrl: "https://sevensidedmarble.com/",
+  pathPrefix: "/blog",
   siteDescription:
     "Developer blog for sevensidedmarble, full stack developer, game dev, musician, and more.",
   icon: "./static/favicon-32.png",
   port: 7777,
-  siteUrl: "https://sevensidedmarble.github.io",
-  pathPrefix: "/blog",
   transformers: {
     remark: {}
   },
