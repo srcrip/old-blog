@@ -18,7 +18,9 @@
 
     <h3>Cool Projects</h3>
     <ul>
-      <li><a href="">Crysh - a Unix shell written in Crystal</a></li>
+      <li>
+        <g-link to="https://github.com/Sevensidedmarble/crysh">Crysh - a Unix shell written in Crystal</g-link>
+      </li>
     </ul>
 
     <h3>Links</h3>

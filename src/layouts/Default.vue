@@ -18,7 +18,7 @@
     </main>
     <div class="footer">
       <p class="footer-centered">
-        <a class="link" href="github.com/sevensidedmarble">check out my GitHub!</a>
+        <g-link to="https://github.com/sevensidedmarble">Check out my GitHub!</g-link>
       </p>
     </div>
   </div>
