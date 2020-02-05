@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Compiling Godot on Arch Linux - Marble Zone</title><meta name="gridsome:hash" content="a3aa97d93ca82a421e62de4a284c85ff0c65aa63"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><meta data-vue-tag="ssr" data-key="description" name="description" content="Developer blog for sevensidedmarble, full stack developer, game dev, musician, and more."><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/blog/assets/static/favicon-32.ce0531f.f7934c85e7ae1b1ced7fa9d462d3a8a7.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/blog/assets/static/favicon-32.ac8d93a.f7934c85e7ae1b1ced7fa9d462d3a8a7.png"><link rel="preload" href="/blog/assets/css/0.styles.4ef7745e.css" as="style"><link rel="preload" href="/blog/assets/js/app.a814d424.js" as="script"><link rel="preload" href="/blog/assets/js/page--src--templates--post-vue.db671678.js" as="script"><link rel="prefetch" href="/blog/assets/js/page--src--pages--404-vue.01eb1113.js"><link rel="prefetch" href="/blog/assets/js/page--src--pages--index-vue.f0bceb13.js"><link rel="prefetch" href="/blog/assets/js/page--src--pages--resume-vue.b092c1c6.js"><link rel="stylesheet" href="/blog/assets/css/0.styles.4ef7745e.css"><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-server-rendered="true" id="app" class="layout" data-v-e783d790><header class="header"><h1 class="main-header"><a href="/">Marble Zone</a><h2>sevensidedmarble's blog</h2></h1><nav class="nav"><a href="/blog/" class="active">Blog</a><a href="/blog/resume">Resume</a><a href="https://github.com/sevensidedmarble" target="_blank" rel="noopener">GitHub</a></nav></header><main><h1 data-v-e783d790>Compiling Godot on Arch Linux</h1><div class="h4 pb-3" data-v-e783d790>
+    Written by:
+    <a href="/blog/resume" data-v-e783d790>sevensidedmarble</a>
+    - 13. January 2020
+  </div><div data-v-e783d790><p>I like using the AUR package for most things if it's available, but I recently
+got very interested in the impressive <a href="https://github.com/Zylann/godot_voxel" target="_blank" rel="nofollow noopener noreferrer">Voxel
+Tools</a> package for Godot, made by
+<a href="https://github.com/Zylann" target="_blank" rel="nofollow noopener noreferrer">Zylann</a>. To use it, you need to compile Godot from source.</p>
+<p>I had some issues getting this to work at first, and eventually realized I
+needed the <code>libglvnd</code> package on Arch. I'm not sure why the documentation
+doesn't mention this on the Arch Wiki. Maybe my system is just weird. But you
+can try to install it all with:</p>
+<pre><code class="language-sh">pacman -S libglvnd scons pkgconf gcc libxcursor libxinerama \
+  libxi libxrandr mesa glu alsa-lib pulseaudio freetype2 yasm
+</code></pre>
+<p>Hope that helps you if you're getting any weird errors compiling Godot.</p>
+</div></main><div class="footer"><p class="footer-centered"><a href="github.com/sevensidedmarble" class="link">check out my GitHub!</a></p></div></div>
+    <script>window.__INITIAL_STATE__={"data":{"post":{"title":"Compiling Godot on Arch Linux","content":"\u003Cp\u003EI like using the AUR package for most things if it's available, but I recently\ngot very interested in the impressive \u003Ca href=\"https:\u002F\u002Fgithub.com\u002FZylann\u002Fgodot_voxel\" target=\"_blank\" rel=\"nofollow noopener noreferrer\"\u003EVoxel\nTools\u003C\u002Fa\u003E package for Godot, made by\n\u003Ca href=\"https:\u002F\u002Fgithub.com\u002FZylann\" target=\"_blank\" rel=\"nofollow noopener noreferrer\"\u003EZylann\u003C\u002Fa\u003E. To use it, you need to compile Godot from source.\u003C\u002Fp\u003E\n\u003Cp\u003EI had some issues getting this to work at first, and eventually realized I\nneeded the \u003Ccode\u003Elibglvnd\u003C\u002Fcode\u003E package on Arch. I'm not sure why the documentation\ndoesn't mention this on the Arch Wiki. Maybe my system is just weird. But you\ncan try to install it all with:\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-sh\"\u003Epacman -S libglvnd scons pkgconf gcc libxcursor libxinerama \\\n  libxi libxrandr mesa glu alsa-lib pulseaudio freetype2 yasm\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003EHope that helps you if you're getting any weird errors compiling Godot.\u003C\u002Fp\u003E\n","author":"sevensidedmarble","published":true,"date":"13. January 2020","description":"How to get Godot running from source.","keywords":"godot, game dev, arch linux"}},"context":{}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/blog/assets/js/app.a814d424.js" defer></script><script src="/blog/assets/js/page--src--templates--post-vue.db671678.js" defer></script>
+  </body>
+</html>
