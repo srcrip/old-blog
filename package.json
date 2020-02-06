@@ -5,12 +5,13 @@
     "build": "gridsome build",
     "predeploy": "npm run build && cp CNAME ./dist",
     "deploy": "gh-pages -d dist",
-    "develop": "gridsome develop",
+    "serve": "gridsome develop",
     "explore": "gridsome explore"
   },
   "dependencies": {
     "gh-pages": "^2.2.0",
-    "gridsome": "^0.7.0"
+    "gridsome": "^0.7.0",
+    "vue-gtag": "^1.4.0"
   },
   "devDependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
