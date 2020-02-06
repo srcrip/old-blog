@@ -20,25 +20,33 @@ This is roughly what I've done to set up a dev environment for Flutter.
 Using your AUR helper of choice (I personally use `yay`):
 
 ```bash
-yay -S android-platform android-sdk android-sdk-build-tools android-sdk-platform-tools flutter flutter-dev android-emulator
+# Install dependencies
+yay -S android-platform android-sdk android-sdk-build-tools \
+  android-sdk-platform-tools flutter flutter-dev android-emulator
 ```
 
 Then, as per the Arch Wiki, create a new group for the android-sdk directory:
 
 ```bash
+# Add a new group
 groupadd android-sdk
-sudo groupadd android-sdk
-gpasswd -a marble android-sdk
-sudo gpasswd -a marble android-sdk
+
+# Add our user to the group
+gpasswd -a ${USER} android-sdk
+
+# Set permissions in this directory
 setfacl -R -m g:android-sdk:rwx /opt/android-sdk
-sudo setfacl -R -m g:android-sdk:rwx /opt/android-sdk
-sudo setfacl -d -m g:android-sdk:rwX /opt/android-sdk
+setfacl -d -m g:android-sdk:rwX /opt/android-sdk
+
+# This is only necessary if you don't want to log out and back in
 newgrp android-sdk
 ```
 
 And then use `sdkmanager` to set up the Android binaries/emulator/etc.
 
 ```bash
+# Download the packages we need
+# Note: I am not an Android expert, not sure if you really need all these
 sdkmanager "platform-tools" "platforms;android-29" "emulator"
 ```
 
@@ -60,3 +68,6 @@ changing the group to my users group:
 ```bash
 chown root:marble -R /opt/android-sdk
 ```
+
+Then things worked relatively well for me. I don't really know why the group hack in
+the wiki doesn't work for me.
