@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "gridsome build",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp CNAME ./dist",
     "deploy": "gh-pages -d dist",
     "develop": "gridsome develop",
     "explore": "gridsome explore"
