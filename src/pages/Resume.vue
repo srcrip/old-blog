@@ -29,7 +29,7 @@
       <a href="https://stackoverflow.com/users/8197386/sevensidedmarble" target="_blank" rel="noopener">Stack Overflow</a>
     </p>
 
-    <p>This is just my portfolio site, if you'd like a .pdf copy of my resume please let me know.</p>
+    <p>This is just my portfolio site, if you'd like a PDF copy of my resume please let me know.</p>
   </Layout>
 </template>
 
