@@ -2,12 +2,17 @@
 
 Built with [Gridsome](https://gridsome.org/).
 
-## Development and deployment
+## Development
 
 ```sh
 yarn develop
 ```
 
+## Deployment
+
+Build everything with `predeploy` and then push it to `gh-pages`:
+
 ```sh
-yarn build
+yarn predeploy
+yarn deploy
 ```
