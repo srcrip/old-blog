@@ -1,9 +1,3 @@
-// This is where project configuration and plugin options are located.
-// Learn more: https://gridsome.org/docs/config
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
-
 module.exports = {
   siteName: "Marble Zone",
   siteUrl: "https://sevensidedmarble.com/",
@@ -15,12 +9,20 @@ module.exports = {
     remark: {}
   },
   plugins: [
+    // {
+    //   use: "@gridsome/source-filesystem",
+    //   options: {
+    //     path: "static/posts/**/*.md",
+    //     typeName: "Post",
+    //     route: "/:slug"
+    //   }
+    // },
     {
-      use: "@gridsome/source-filesystem",
+      use: '@gridsome/vue-remark',
       options: {
-        path: "static/posts/**/*.md",
-        typeName: "Post",
-        route: "/:slug"
+        typeName: 'Post',
+        baseDir: 'static/posts',
+        template: './src/templates/Post.vue'
       }
     }
   ]
