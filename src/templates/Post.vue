@@ -6,7 +6,7 @@
       <g-link to="/resume">{{ $page.post.author }}</g-link>
       - {{ $page.post.date }}
     </div>
-    <div v-if="$page.post" v-html="$page.post.content"></div>
+    <VueRemarkContent />
   </Layout>
 </template>
 
