@@ -13,9 +13,11 @@
         <g-link to="https://github.com/sevensidedmarble">GitHub</g-link>
       </nav>
     </header>
-    <main>
-      <slot/>
-    </main>
+    <transition name="fade" appear>
+      <main>
+        <slot/>
+      </main>
+   </transition>
     <div class="footer">
       <p class="footer-centered">
         <g-link to="https://github.com/sevensidedmarble">Check out my GitHub!</g-link>
@@ -41,6 +43,15 @@ query {
   nav {
     margin: .75rem auto;
   }
+}
+
+.fade-enter-active {
+  transition: all .3s;
+}
+
+.fade-enter {
+  transform: translateX(-10px);
+  opacity: 0;
 }
 
 body {
