@@ -9,8 +9,10 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@gridsome/vue-remark": "^0.1.10",
     "gh-pages": "^2.2.0",
     "gridsome": "^0.7.0",
+    "medium-zoom": "^1.0.5",
     "vue-gtag": "^1.4.0"
   },
   "devDependencies": {
