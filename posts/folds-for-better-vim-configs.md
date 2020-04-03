@@ -38,7 +38,7 @@ Some people even take this a step farther and apply some crazy fold styling to m
 
 `fold-marker` is a folding method few people I'd imagine spend much time thinking about. The markers themselves look like this:
 
-{% highlight vim %}
+{% raw %}
 ```
 "" Autocomplete {{{
 Plug 'Shougo/neco-vim'
@@ -62,7 +62,7 @@ autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
 autocmd FileType gitcommit setlocal spell spelllang=en_us
 "" }}}
 ```
-{% endhighlight %}
+{% endraw %}
 
 Which when folded look something like this:
 
