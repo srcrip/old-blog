@@ -14,7 +14,7 @@
       </nav>
     </header>
     <transition name="fade" appear>
-      <main>
+      <main class="main">
         <slot/>
       </main>
    </transition>

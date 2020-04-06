@@ -292,8 +292,8 @@ img {
 .marginnote {
   float: right;
   clear: right;
-  margin-right: -60%;
-  width: 50%;
+  margin-right: -34%;
+  width: 29%;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1.1rem;
@@ -429,7 +429,17 @@ label.margin-toggle:not(.sidenote-number) {
   }
 }
 
-@media (max-width: 760px) {
+
+@media (min-width: 1216px) {
+  .main {
+    width: 90%;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+
+
+@media (max-width: 1216px) {
   hr,
   section > p,
   section > footer,
