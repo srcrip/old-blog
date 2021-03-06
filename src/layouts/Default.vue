@@ -1,18 +1,18 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <div class="main-header">
-        <h1 class="main-h1">
+    <div class="top">
+      <header>
+        <h1>
           <a href="/">Marble Zone</a>
         </h1>
-        <h2 class="sub-header">sevensidedmarble's blog</h2>
-      </div>
+        <h2>sevensidedmarble's blog</h2>
+      </header>
       <nav class="nav">
         <g-link to="/">Blog</g-link>
         <g-link to="/resume">Resume</g-link>
         <g-link to="https://github.com/sevensidedmarble">GitHub</g-link>
       </nav>
-    </header>
+    </div>
     <transition name="fade" appear>
       <main class="main">
         <slot/>
@@ -36,7 +36,7 @@ query {
 
 <style>
 @media only screen and (max-width: 580px) {
-  .main-header {
+  header {
     width: 100%;
   }
 
@@ -66,9 +66,24 @@ main {
   flex: 1;
 }
 
-.sub-header {
-  margin: 5px;
+header > h1 {
+  font-family: var(--font-serif);
+  margin: 0;
+}
+
+header > h1 > a {
+  color: var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+  transition: all .2s ease-in-out;
+}
+
+header > h1 > a:hover {
+  color: mediumslateblue;
+}
+
+header > h2 {
   font-size: 1.25rem;
+  font-style: italic;
 }
 
 .layout {
@@ -81,12 +96,7 @@ main {
   flex-direction: column;
 }
 
-.main-h1 {
-  margin-top: .7rem;
-  margin-bottom: .6rem;
-}
-
-.header {
+.top {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -94,7 +104,7 @@ main {
   align-items: center;
 }
 
-.main-header {
+header {
   margin-top: 1.4rem;
 }
 

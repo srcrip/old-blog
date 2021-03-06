@@ -1,12 +1,14 @@
 <template>
   <Layout>
-    <h1 v-if="$page.post">{{ $page.post.title }}</h1>
-    <div v-if="$page.post" class="h4 pb-3">
-      Written by:
-      <g-link to="/resume">{{ $page.post.author }}</g-link>
-      - {{ $page.post.date }}
-    </div>
-    <VueRemarkContent />
+    <article>
+      <h1 v-if="$page.post">{{ $page.post.title }}</h1>
+      <div v-if="$page.post" class="subheading">
+        written by
+        <g-link to="/resume">{{ $page.post.author }}</g-link>
+        on {{ $page.post.date }}
+      </div>
+      <VueRemarkContent />
+    </article>
   </Layout>
 </template>
 
@@ -34,4 +36,23 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style>
+figure {
+  text-align: center;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.note {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1.125rem 1.25rem 1.25rem;
+}
+
+.note > header {
+  text-transform: uppercase;
+  padding-bottom: 1em;
+  font-weight: 300;
+  margin-top: 0;
+}
+</style>

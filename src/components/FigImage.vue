@@ -1,6 +1,7 @@
 <!-- Wraps g-image components in the figure tag, among other things. -->
 <template>
   <figure>
+    <header>{{ header }}</header>
     <g-image ref="img" :src="src" :alt="caption" data-zoomable @click="zoom" />
     <figcaption>
       {{ caption }}
@@ -15,6 +16,7 @@ export default {
   name: 'FigImage',
   props: {
     src: String,
+    header: String,
     caption: String
   },
   methods: {
