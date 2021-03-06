@@ -14,9 +14,14 @@ You may or may not know that I am pretty into Emacs and Org mode. Org mode, if y
 
 <FigImage src="/images/org-mode.png" caption="Org mode is great for writing structured content like scripts." />
 
-Some people even use Org mode as a [literate programming](https://wiki.c2.com/?LiterateProgramming) <label for="sn-demo" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-demo" class="margin-toggle"/><span class="sidenote">Conceived by the famous Donald Knuth, which is interesting.</span> tool for their Emacs config. I've always thought this was pretty cool, and thought literate programming in general was pretty cool, but never found a great way to apply it to my vim config until now.
+Some people even use Org mode as a [literate programming](https://wiki.c2.com/?LiterateProgramming)<sup><a href="#note-1">1</a></sup> tool for their Emacs config. I've always thought this was pretty cool, and thought literate programming in general was pretty cool, but never found a great way to apply it to my vim config until now.
 
-# The inspiration
+<aside id="note-1" class="note">
+<header>Sidenote 1</header>
+Literate Programming was also conceived by the famous Donald Knuth, which is interesting.
+</aside>
+
+### The inspiration
 
 Before continuing I'd like to lead with where I found this idea online:
 - https://vi.stackexchange.com/questions/3814/is-there-a-best-practice-to-fold-a-vimrc-file
@@ -24,17 +29,13 @@ Before continuing I'd like to lead with where I found this idea online:
 
 I'm not sure which of these I saw first, but the basic concept is using manually placed fold markers in your vim config to break it down into sections. Kind of like this:
 
-### Before...
+<FigImage src="/images/before-folding.png" header="Before..." caption="Please forgive my messy config." />
 
-<FigImage src="/images/before-folding.png" caption="Please forgive my messy config." />
-
-### After!
-
-<FigImage src="/images/after-folding.png" caption="This is what it looks like with one of the folded sections opened." />
+<FigImage src="/images/after-folding.png" header="After!" caption="This is what it looks like with one of the folded sections opened." />
 
 Some people even take this a step farther and apply some crazy fold styling to make it look even more like Org mode, which you can see in one of the links above.
 
-# Here's what you need
+### Here's what you need
 
 `fold-marker` is a folding method few people I'd imagine spend much time thinking about. The markers themselves look like this:
 
@@ -76,7 +77,7 @@ Which when folded look something like this:
 
 I've found this is an amazing way of breaking up your vim config into sections without relying on splitting it into different files (which I was doing before, and wasn't ever completely satisfied with).
 
-# But wait, there's more
+### But wait, there's more
 
 There's only one problem though, you probably don't want to set `foldmethod` to `fold-marker` for everything. I personally think `syntax` or `indent` is the most useful general-purpose `foldmethod`, so that is what I set mine to in my vim config. So how you change `foldmethod` only for `.vim` files?
 
